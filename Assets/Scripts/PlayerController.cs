@@ -10,14 +10,14 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        Managers.Input.KeyAction -= OnKeyboard; // ÀÌ¹Ì È£ÃâÇÑ »óÅÂ¶ó¸é ÀÏ´Ü Á¦°ÅÇÏ°í ´Ù½Ã Ãß°¡ÇÏ±â À§ÇØ
+        Managers.Input.KeyAction -= OnKeyboard; // ï¿½Ì¹ï¿½ È£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ù½ï¿½ ï¿½ß°ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½
         Managers.Input.KeyAction += OnKeyboard;
     }
 
     void Update()
     {
 
-        // Àý´ë È¸Àü°ª
+        // ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½
         //transform.eulerAngles = new Vector3(0.0f, _yAngle, 0.0f);
 
         // +- delta
@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(Vector3.right), 0.1f);
             transform.position += Vector3.right * Time.deltaTime * _speed;
+            // hello
         }
     }
 }
